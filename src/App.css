@@ -1,7 +1,8 @@
 .App {
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(#74ebd5, #ACB6E5);
+  background: radial-gradient(circle at top right, #DDD5F8, #f7dbe7, #fff9fb, #ffffff);
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,7 +17,7 @@
 input[type=text] {
   padding: 15px 20px;
   min-width: 100%;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.6);
   border: none;
   outline: none;
   color: #666666;
@@ -36,5 +37,11 @@ input[type=text]::placeholder {
   text-decoration: none;
   display: block;
   margin: 10px 0;
+  font-size: 1rem;
   color: #222222;
+}
+
+h1 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
 }

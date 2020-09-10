@@ -27,10 +27,12 @@ function App() {
         console.log(error.message);
       });
   };
+
   return (
     <Router>
       <div className='App'>
         <div className='app-wrapper'>
+          <h1>URL Shortener</h1>
           <form onSubmit={handleSubmit}>
             <input
               type='text'
@@ -50,6 +52,7 @@ function App() {
                     className='urlname'
                     href={`https://rel.ink/${urlShorted}`}
                   >
+                    <img className='loading' src='' alt='' />
                     https://rel.ink/{urlShorted}
                   </a>
                 </div>
