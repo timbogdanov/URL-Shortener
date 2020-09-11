@@ -34,6 +34,7 @@ function App() {
       <div className='App'>
         <div className='app-wrapper'>
           <h1>URL Shortener</h1>
+          <p>Secure and reliable short links via rel.ink</p>
           <form onSubmit={handleSubmit}>
             <input
               type='text'

@@ -14,6 +14,7 @@
 }
 
 input[type='text'] {
+  position: relative;
   padding: 15px 20px;
   min-width: 100%;
   background: rgba(255, 255, 255, 0.6);
@@ -21,6 +22,7 @@ input[type='text'] {
   outline: none;
   color: #666666;
   border-radius: 10px;
+  box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.1);
 }
 
 input[type='text']::placeholder {
@@ -44,7 +46,12 @@ input[type='text']::placeholder {
 
 h1 {
   font-size: 1.4rem;
-  margin-bottom: 10px;
+}
+
+p {
+  margin: 10px 0 20px 0;
+  font-size: 1rem;
+  color: #999999;
 }
 
 form {
@@ -53,10 +60,10 @@ form {
 
 .loading-container {
   position: absolute;
-  top: 10px;
+  top: 12px;
   right: 20px;
 }
 
 .loading-container img {
-  width: 25px;
+  width: 20px;
 }
