@@ -7,6 +7,7 @@ import './App.css';
 function App() {
   const [inputValue, setInputvalue] = useState('');
   const [urlArray, setUrlArray] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e) => {
     setInputvalue({ ...inputValue, [e.target.name]: e.target.value });
@@ -15,13 +16,13 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    setIsLoading(true);
     axios
       .post('https://rel.ink/api/links/', { url: inputValue.url })
       .then((data) => {
         const newUrl = data.data.hashid;
         setUrlArray([...urlArray, newUrl]);
-        console.log(urlArray);
+        setIsLoading(false);
       })
       .catch((error) => {
         console.log(error.message);
@@ -41,6 +42,9 @@ function App() {
               name='url'
               value={inputValue.url}
             />
+            <div className='loading-container'>
+              {isLoading ? <img src='https://rel.ink/gxx1Gm' alt='' /> : ''}
+            </div>
           </form>
 
           <div className='url-data'>

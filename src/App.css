@@ -1,7 +1,7 @@
 .App {
   width: 100vw;
   height: 100vh;
-  background: radial-gradient(circle at top right, #DDD5F8, #f7dbe7, #fff9fb, #ffffff);
+  background: radial-gradient(circle at top right, #ddd5f8, #f7dbe7, #fff9fb, #ffffff);
 
   display: flex;
   align-items: center;
@@ -9,12 +9,11 @@
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-
 .app-wrapper {
   width: 40%;
 }
 
-input[type=text] {
+input[type='text'] {
   padding: 15px 20px;
   min-width: 100%;
   background: rgba(255, 255, 255, 0.6);
@@ -24,7 +23,7 @@ input[type=text] {
   border-radius: 10px;
 }
 
-input[type=text]::placeholder {
+input[type='text']::placeholder {
   color: #666666;
 }
 
@@ -33,10 +32,12 @@ input[type=text]::placeholder {
   text-align: center;
 }
 
+.link {
+  margin: 15px 0;
+}
+
 .url-data a {
   text-decoration: none;
-  display: block;
-  margin: 10px 0;
   font-size: 1rem;
   color: #222222;
 }
@@ -44,4 +45,18 @@ input[type=text]::placeholder {
 h1 {
   font-size: 1.4rem;
   margin-bottom: 10px;
+}
+
+form {
+  position: relative;
+}
+
+.loading-container {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.loading-container img {
+  width: 25px;
 }
